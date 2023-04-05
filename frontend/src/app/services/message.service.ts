@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -6,6 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class MessageService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
+
+  getMessage(): Observable<string> {
+      return this.httpClient.get("http://localhost:434/api/hello", {responseType: 'text'});
+  }
 
 }

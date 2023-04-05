@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  prod:
+    build: .
+    image: angular-and-spring
+    container_name: angular-and-spring
+    ports:
+      - "434:8080"
+    networks:
+      - angular-and-spring-net
+networks:
+  angular-and-spring-net:
+    name: angular-and-spring-net
+    driver: bridge

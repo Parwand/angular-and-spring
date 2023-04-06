@@ -5,7 +5,7 @@ services:
     image: angular-and-spring
     container_name: angular-and-spring
     ports:
-      - "434:8080"
+      - "8080:8080"
     networks:
       - angular-and-spring-net
 networks:

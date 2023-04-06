@@ -10,7 +10,7 @@ export class MessageService {
   constructor(private httpClient: HttpClient) { }
 
   getMessage(): Observable<string> {
-      return this.httpClient.get("http://localhost:434/api/hello", {responseType: 'text'});
+      return this.httpClient.get("http://localhost:8080/api/hello", {responseType: 'text'});
   }
 
 }
